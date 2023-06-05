@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ValueObjects\" />
+    <ProjectReference Include="..\3PidehTravelManagement_Shared.Abstraction\3PidehTravelManagement_Shared.Abstraction.csproj" />
   </ItemGroup>
 
 </Project>
