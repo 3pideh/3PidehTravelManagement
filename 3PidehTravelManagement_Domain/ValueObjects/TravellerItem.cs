@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _3PidehTravelManagement_Domain.ValueObjects
 {
-    internal class TravellerItem
+    public class TravellerItem
     {
         public TravellerItem() { }
 
@@ -25,6 +25,17 @@ namespace _3PidehTravelManagement_Domain.ValueObjects
             Name = name;
             Quantity = quantity;
             IsTaken = isTaken;
+        }
+
+        public TravellerItem(string name, uint quantity)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new TravellerItemNameException();
+            }
+            Name = name;
+            Quantity = quantity;
+            
         }
     }
 }
